@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Geração e consulta de NFS-e."
   spec.description   = "Geração e consulta de NFS-e integrado ao sistema ISSNET."
-  spec.homepage      = "https://github.com/eduardoscottini/nfse"
+  spec.homepage      = "https://github.com/eduardoscottini/nfse-issnet"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
     # spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "https://github.com/eduardoscottini/nfse"
+    spec.metadata["source_code_uri"] = "https://github.com/eduardoscottini/nfse-issnet"
     # spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
