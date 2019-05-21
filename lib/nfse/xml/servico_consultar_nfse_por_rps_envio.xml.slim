@@ -1,0 +1,6 @@
+doctype xml
+*{ tag: "ConsultarNfseRpsEnvio" } *message_namespaces
+  *{tag: "Prestador"}
+    = Utils::XML.render '_tc_identificacao_prestador', emitente: content_xml.prestador
+  *{tag: "IdentificacaoRps"}
+    = Utils::XML.render '_tc_identificacao_rps', identificacao: content_xml.identificacao_rps

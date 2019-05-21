@@ -1,0 +1,4 @@
+- if !cpf_cnpj.cnpj.blank?
+	*{tag: "#{namespace_for_tags}Cnpj"} = cpf_cnpj.cnpj
+- elsif !cpf_cnpj.cpf.blank?
+	*{tag: "#{namespace_for_tags}Cpf"} = cpf_cnpj.cpf

@@ -1,0 +1,12 @@
+- servico ||= false
+- raise "Deve ser passado uma vsariavel local chamada rps" unless servico
+
+*{tag: "#{namespace_for_tags}Valores"}
+	= Utils::XML.render '_tc_valores', valores: servico.valores
+
+*{tag: "#{namespace_for_tags}ItemListaServico"} = servico.item_lista_servico
+*{tag: "#{namespace_for_tags}CodigoCnae"} = servico.codigo_cnae
+*{tag: "#{namespace_for_tags}CodigoTributacaoMunicipio"} = servico.codigo_tributacao_municipio
+
+*{tag: "#{namespace_for_tags}Discriminacao"}   = servico.discriminacao
+*{tag: "#{namespace_for_tags}MunicipioPrestacaoServico"} = servico.municipio_prestacao_servico

@@ -1,0 +1,4 @@
+doctype xml
+*{tag: "ConsultarNfseEnvio"} *message_namespaces
+	*{tag: "Prestador"}
+		= Utils::XML.render '_tc_identificacao_prestador', emitente: content_xml.prestador

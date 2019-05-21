@@ -1,0 +1,48 @@
+- valores ||= false
+- raise "É obrigatório passar um RPS por parâmetro" unless valores
+
+*{ tag: "#{namespace_for_tags}ValorServicos" } = valores.valor_servicos.round(2)
+
+- if valores.valor_deducoes && valores.valor_deducoes.to_f > 0.0
+  *{ tag: "#{namespace_for_tags}ValorDeducoes" } = valores.valor_deducoes
+
+- if valores.valor_pis && valores.valor_pis.to_f > 0.0
+  *{ tag: "#{namespace_for_tags}ValorPis" } = valores.valor_pis.round(2)
+
+- if valores.valor_cofins && valores.valor_cofins.to_f > 0.0
+  *{ tag: "#{namespace_for_tags}ValorCofins" } = valores.valor_cofins.round(2)
+
+- if valores.valor_inss && valores.valor_inss.to_f > 0.0
+  *{ tag: "#{namespace_for_tags}ValorInss" } = valores.valor_inss.round(2)
+
+- if valores.valor_ir && valores.valor_ir.to_f > 0.0
+  *{ tag: "#{namespace_for_tags}ValorIr" } = valores.valor_ir.round(2)
+
+- if valores.valor_csll && valores.valor_csll.to_f > 0.0
+  *{ tag: "#{namespace_for_tags}ValorCsll" } = valores.valor_csll
+
+*{ tag: "#{namespace_for_tags}IssRetido" } = valores.iss_retido
+
+- if valores.valor_iss && valores.valor_iss.to_f > 0.0
+  *{ tag: "#{namespace_for_tags}ValorIss" } = valores.valor_iss.round(2)
+
+- if valores.valor_iss_retido && valores.valor_iss_retido.to_f > 0.0
+  *{ tag: "#{namespace_for_tags}ValorIssRetido" } = valores.valor_iss_retido.round(2)
+
+- if valores.outras_retencoes && valores.outras_retencoes.to_f > 0.0
+  *{ tag: "#{namespace_for_tags}OutrasRetencoes" } = valores.outras_retencoes.round(2)
+
+- if valores.base_calculo && valores.base_calculo.to_f > 0.0
+  *{ tag: "#{namespace_for_tags}BaseCalculo" } = valores.base_calculo.round(2)
+
+- if valores.aliquota && valores.aliquota.to_f > 0.0
+  *{ tag: "#{namespace_for_tags}Aliquota" } = valores.aliquota
+
+- if valores.valor_liquido_nfse && valores.valor_liquido_nfse.to_f > 0.0
+  *{ tag: "#{namespace_for_tags}ValorLiquidoNfse" } = valores.valor_liquido_nfse.round(2)
+
+- if valores.desconto_incondicionado && valores.desconto_incondicionado.to_f > 0.0
+  *{ tag: "#{namespace_for_tags}DescontoIncondicionado" } = valores.desconto_incondicionado
+
+- if valores.desconto_condicionado && valores.desconto_condicionado.to_f > 0.0
+  *{ tag: "#{namespace_for_tags}DescontoCondicionado" } = valores.desconto_condicionado

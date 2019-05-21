@@ -1,0 +1,4 @@
+*{ tag: "#{namespace_for_tags}CpfCnpj" }
+  = Utils::XML.render '_tc_cpf_cnpj', cpf_cnpj: emitente.cpf_cnpj
+- unless emitente.inscricao_municipal.nil?
+	*{tag: "#{namespace_for_tags}InscricaoMunicipal"} = emitente.inscricao_municipal

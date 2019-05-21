@@ -1,0 +1,7 @@
+- contact ||= false
+- raise "Deve ser passado uma variável local chamda contact" unless contact
+
+- if contact.telefone
+	*{tag: "#{namespace_for_tags}Telefone"} = contact.telefone
+- if contact.email
+	*{tag: "#{namespace_for_tags}Email"} = contact.email

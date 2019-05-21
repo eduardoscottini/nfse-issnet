@@ -1,0 +1,43 @@
+- inf_rps ||= false
+- raise "É obrigatório passar um RPS por parâmetro" unless inf_rps
+
+*{tag: "#{namespace_for_tags}IdentificacaoRps"}
+	= Utils::XML.render '_tc_identificacao_rps', identificacao: inf_rps.identificacao_rps
+
+*{tag: "#{namespace_for_tags}DataEmissao"}      = inf_rps.data_emissao
+*{tag: "#{namespace_for_tags}NaturezaOperacao"} = inf_rps.natureza_operacao
+
+- if inf_rps.regime_especial_tributacao
+	/ Código de identificação do regime especial de tributação: 
+	/ - (1)Microempresa municipal
+	/ - (2)Estimativa
+	/ - (3)Sociedade de profissionais
+	/ - (4)Cooperativa, 
+	/ - (5)Microempresário Individual (MEI)
+	/ - (6)Microempresário e Empresa de Pequeno Porte (ME EPP)
+	*{tag: "#{namespace_for_tags}RegimeEspecialTributacao"} = inf_rps.regime_especial_tributacao
+
+/ (1)sim ----- (2)não -----
+*{tag: "#{namespace_for_tags}OptanteSimplesNacional"} = inf_rps.optante_simples_nacional
+
+/ (1)sim ----- (2)não -----
+*{tag: "#{namespace_for_tags}IncentivadorCultural"} = inf_rps.incentivador_cultural
+
+*{tag: "#{namespace_for_tags}Status"} = inf_rps.status
+
+- if inf_rps.rps_substituido
+	*{tag: "#{namespace_for_tags}RpsSubstituido"}
+		= Utils::XML.render '_tc_identificacao_rps', identificacao: inf_rps.rps_substituido
+
+*{tag: "#{namespace_for_tags}Servico"}
+	= Utils::XML.render '_tc_dados_servico', servico: inf_rps.servico
+
+*{tag: "#{namespace_for_tags}Prestador"}
+	= Utils::XML.render '_tc_identificacao_prestador', emitente: inf_rps.prestador
+
+*{tag: "#{namespace_for_tags}Tomador"}
+	= Utils::XML.render '_tc_dados_tomador', destinatario: inf_rps.tomador
+
+- if inf_rps.intermediario_servico
+	*{tag: "#{namespace_for_tags}IntermediarioServico"}
+		= Utils::XML.render '_tc_identificacao_intermediario_servico', intermediario: inf_rps.intermediario_servico

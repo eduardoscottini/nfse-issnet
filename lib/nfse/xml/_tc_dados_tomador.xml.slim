@@ -1,0 +1,15 @@
+- destinatario ||= false
+- raise "Deve ser passado uma vsariavel local chamada destinatario" unless destinatario
+*{tag: "#{namespace_for_tags}IdentificacaoTomador"}
+	= Utils::XML.render '_tc_identificacao_tomador', destinatario: destinatario.identificacao_tomador
+
+- if destinatario.razao_social
+	*{tag: "#{namespace_for_tags}RazaoSocial"} = destinatario.razao_social
+
+- if destinatario.endereco
+	*{tag: "#{namespace_for_tags}Endereco"}
+		= Utils::XML.render '_tc_endereco', address: destinatario.endereco
+
+- if destinatario.contato && (destinatario.contato.telefone || destinatario.contato.email)
+	*{tag: "#{namespace_for_tags}Contato"}
+		= Utils::XML.render '_tc_contato', contact: destinatario.contato

@@ -1,0 +1,4 @@
+*{tag: "#{namespace_for_tags}CpfCnpj"}
+	= Utils::XML.render '_tc_cpf_cnpj', cpf_cnpj: destinatario.cpf_cnpj
+- if destinatario.inscricao_municipal
+	*{tag: "#{namespace_for_tags}InscricaoMunicipal"} = destinatario.inscricao_municipal

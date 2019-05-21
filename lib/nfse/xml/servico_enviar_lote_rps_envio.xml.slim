@@ -1,0 +1,9 @@
+doctype xml
+*{ tag: "EnviarLoteRpsEnvio" } *message_namespaces
+  - xml_lote_rps = Utils::XML.render '_tc_lote_rps', lote_rps: content_xml.lote_rps
+  - id_lote = "L#{content_xml.lote_rps.numero_lote}"
+  *{tag: "LoteRps"} *{id: id_lote}
+    = xml_lote_rps
+
+  - if Utils::Assinatura::certificate
+    = Utils::XML.render('signature_sh1', data_xml: xml_lote_rps, uri: id_lote, certificate: Utils::Assinatura::certificate, certificate_key: Utils::Assinatura::certificate_key)

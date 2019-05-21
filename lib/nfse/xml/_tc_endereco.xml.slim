@@ -1,0 +1,16 @@
+- address ||= false
+- raise "Deve ser passado uma variável local chamda address" unless address
+
+*{ tag: "#{namespace_for_tags}Endereco" } = address.endereco
+- if address.cep
+  *{ tag: "#{namespace_for_tags}Cep" } = address.cep
+- if address.numero
+  *{ tag: "#{namespace_for_tags}Numero" } = address.numero
+- if address.complemento
+  *{ tag: "#{namespace_for_tags}Complemento" } = address.complemento
+- if address.bairro
+  *{ tag: "#{namespace_for_tags}Bairro" } = address.bairro
+- if address.cidade
+  *{ tag: "#{namespace_for_tags}Cidade" } = address.cidade
+- if address.estado
+  *{ tag: "#{namespace_for_tags}Estado" } = address.estado

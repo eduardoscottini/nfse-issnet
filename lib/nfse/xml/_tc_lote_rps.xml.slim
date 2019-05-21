@@ -1,0 +1,9 @@
+*{tag: "#{namespace_for_tags}NumeroLote"} = lote_rps.numero_lote
+*{tag: "#{namespace_for_tags}CpfCnpj"} = Utils::XML.render '_tc_cpf_cnpj', cpf_cnpj: lote_rps.cpf_cnpj
+*{tag: "#{namespace_for_tags}InscricaoMunicipal"} = lote_rps.inscricao_municipal
+*{tag: "#{namespace_for_tags}QuantidadeRps"} = lote_rps.lista_rps.size
+*{tag: "#{namespace_for_tags}ListaRps"}
+	- lote_rps.lista_rps.each do |rps|
+		*{tag: "#{namespace_for_tags}Rps"}
+			/ tc_rps já está assinado (se tiver um certificado)
+			= Utils::XML.render '_tc_rps', rps: rps

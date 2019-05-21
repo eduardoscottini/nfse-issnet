@@ -1,0 +1,7 @@
+- xml_rps = Utils::XML.render '_tc_inf_rps', inf_rps: rps.inf_rps
+- id_rps = "R#{rps.inf_rps.identificacao_rps.numero}"
+*{ tag: "#{namespace_for_tags}InfRps" }
+	= xml_rps
+
+/ - if certificate
+/   = Utils::XML.render('signature_sh1', data_xml: xml_rps, uri: id_rps)
