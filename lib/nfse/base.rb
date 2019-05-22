@@ -1,30 +1,54 @@
 module Nfse
   class Base
-    attr_accessor :content_xml
-    attr_accessor :cliente
-
     def initialize(xml)
-      self.content_xml = entidade.new(xml)
-      self.cliente = Savon.client(wsdl: 'http://www.issnetonline.com.br/webserviceabrasf/homologacao/servicos.asmx?wsdl',
-                                  soap_version: 2,
-                                  namespace_identifier: :nfd)
-    end
+      configure
+      validate_configuration
 
-    def xml_builder
-      raise 'errou'
+      self.content_xml = entity.new(xml)
     end
 
     def request
-      @original_response = cliente.call(metodo_wsdl, message: RequisicaoAbrasf.new(xml_builder))
+      @original_response = cliente.call(method_wsdl, message: RequisicaoAbrasf.new(xml_builder))
       set_response
     end
 
     def monta_xml_completo
-      cliente.build_request metodo_wsdl, message: RequisicaoAbrasf.new(xml_builder)
+      cliente.build_request method_wsdl, message: RequisicaoAbrasf.new(xml_builder)
     end
 
-    def metodo_wsdl
-      raise 'errou feio'
+    private
+
+    attr_accessor :content_xml, :method_wsdl, :default_namespace, :entity, :template_xml
+
+    def configure
+      self.method_wsdl = nil
+      self.default_namespace = nil
+      self.entity = nil
+      self.template_xml = nil
+    end
+
+    def validate_configuration
+      method_wsdl or raise Nfse::Error, 'Método wsdl é obrigatório'
+      default_namespace or raise Nfse::Error, 'Caminho para schema xml é obrigatório'
+      entity or raise Nfse::Error, 'Entidade é obrigatório'
+      template_xml or raise Nfse::Error, 'Template XML é obrigatório'
+    end
+
+    def cliente
+      @cliente ||= Savon.client(wsdl: 'http://www.issnetonline.com.br/webserviceabrasf/homologacao/servicos.asmx?wsdl',
+                                soap_version: 2,
+                                namespace_identifier: :nfd)
+    end
+
+    def message_namespaces
+      {
+        xmlns: default_namespace,
+        'xmlns:tc': 'http://www.issnetonline.com.br/webserviceabrasf/vsd/tipos_complexos.xsd'
+      }
+    end
+
+    def xml_builder
+      Utils::XML.render template_xml, message_namespaces: message_namespaces, content_xml: content_xml
     end
 
     class RequisicaoAbrasf
