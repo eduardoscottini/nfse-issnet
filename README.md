@@ -1,8 +1,8 @@
 # Nfse Issnet
 
-[![Build Status](https://travis-ci.org/eduardoscottini/nfse-issnet.svg?branch=master)](https://travis-ci.org/eduardoscottini/nfse-issnet)
-[![Maintainability](https://api.codeclimate.com/v1/badges/16db339be9609ffa69ef/maintainability)](https://codeclimate.com/github/eduardoscottini/nfse-issnet/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/16db339be9609ffa69ef/test_coverage)](https://codeclimate.com/github/eduardoscottini/nfse-issnet/test_coverage)
+[![Build Status](https://travis-ci.org/eduardoscottini/nfse_issnet.svg?branch=master)](https://travis-ci.org/eduardoscottini/nfse_issnet)
+[![Maintainability](https://api.codeclimate.com/v1/badges/16db339be9609ffa69ef/maintainability)](https://codeclimate.com/github/eduardoscottini/nfse_issnet/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/16db339be9609ffa69ef/test_coverage)](https://codeclimate.com/github/eduardoscottini/nfse_issnet/test_coverage)
 
 Simple integration with ISSNET for dealing with NFS-e.
 
@@ -11,7 +11,7 @@ Simple integration with ISSNET for dealing with NFS-e.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'nfse-issnet'
+gem 'nfse_issnet'
 ```
 
 And then execute:
@@ -20,7 +20,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install nfse-issnet
+    $ gem install nfse_issnet
 
 ## Usage
 
@@ -34,7 +34,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/eduardoscottini/nfse-issnet. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/eduardoscottini/nfse_issnet. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -42,4 +42,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the nfse-issnet project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/eduardoscottini/nfse-issnet/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the nfse_issnet project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/eduardoscottini/nfse_issnet/blob/master/CODE_OF_CONDUCT.md).
