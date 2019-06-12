@@ -5,7 +5,7 @@ require "nfse_issnet/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "nfse_issnet"
-  spec.version       = Nfse::VERSION
+  spec.version       = NfseIssnet::VERSION
   spec.authors       = ["Eduardo Scottini"]
   spec.email         = ["eduardo.scottini@gmail.com"]
 
