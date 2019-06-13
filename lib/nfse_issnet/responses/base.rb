@@ -17,7 +17,7 @@ module NfseIssnet
       end
 
       def notas_fiscais
-        @notas_fiscais ||= pega_itens(notas_fiscais_path).map { |nfs| Nfse::Entities::NotaFiscal.new(nfs[:nfse][:inf_nfse]) }
+        @notas_fiscais ||= pega_itens(notas_fiscais_path).map { |nfs| NfseIssnet::Entities::NotaFiscal.new(nfs[:nfse][:inf_nfse]) }
       end
 
       def erros

@@ -1,7 +1,7 @@
 module NfseIssnet
   module Entities
     class TcDadosServico < BaseEntity
-      attribute :valores, Nfse::Entities::TcValores
+      attribute :valores, NfseIssnet::Entities::TcValores
       attribute :item_lista_servico, Types::Coercible::String.constrained(max_size: 5)
       attribute :codigo_cnae, Types::Coercible::Integer.constrained(lteq: ('9' * 7).to_i)
       attribute :codigo_tributacao_municipio, Types::String.constrained(max_size: 20)

@@ -28,10 +28,10 @@ module NfseIssnet
     end
 
     def validate_configuration
-      method_wsdl or raise Nfse::Error, 'Método wsdl é obrigatório'
-      default_namespace or raise Nfse::Error, 'Caminho para schema xml é obrigatório'
-      entity or raise Nfse::Error, 'Entidade é obrigatório'
-      template_xml or raise Nfse::Error, 'Template XML é obrigatório'
+      method_wsdl or raise NfseIssnet::Error, 'Método wsdl é obrigatório'
+      default_namespace or raise NfseIssnet::Error, 'Caminho para schema xml é obrigatório'
+      entity or raise NfseIssnet::Error, 'Entidade é obrigatório'
+      template_xml or raise NfseIssnet::Error, 'Template XML é obrigatório'
     end
 
     def cliente

@@ -2,9 +2,9 @@ module NfseIssnet
   module Entities
     class NotaFiscal < BaseEntity
       attribute :numero, Types::Coercible::Integer
-      attribute :servico, Nfse::Entities::TcDadosServico
-      attribute :tomador_servico, Nfse::Entities::TcDadosTomador
-      attribute :prestador_servico, Nfse::Entities::TcDadosPrestador
+      attribute :servico, NfseIssnet::Entities::TcDadosServico
+      attribute :tomador_servico, NfseIssnet::Entities::TcDadosTomador
+      attribute :prestador_servico, NfseIssnet::Entities::TcDadosPrestador
       attribute? :codigo_verificacao, Types::Coercible::String
       attribute? :data_emissao, Types::Params::DateTime
       attribute? :competencia, Types::Params::Date

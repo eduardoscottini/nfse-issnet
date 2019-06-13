@@ -1,8 +1,8 @@
 module NfseIssnet
   module Entities
     class ServicoConsultarNfsePorRpsEnvio < BaseEntity
-      attribute :prestador, Nfse::Entities::TcIdentificacaoPrestador
-      attribute :identificacao_rps, Nfse::Entities::TcIdentificacaoRps
+      attribute :prestador, NfseIssnet::Entities::TcIdentificacaoPrestador
+      attribute :identificacao_rps, NfseIssnet::Entities::TcIdentificacaoRps
     end
   end
 end

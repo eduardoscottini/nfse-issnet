@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web:
+    build: .
+    tty: true
+    stdin_open: true
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/myapp
+      - bundle-cache:/bundle
+    command: bundle console
+volumes:
+  postgresql-data: {}
+  bundle-cache: {}
