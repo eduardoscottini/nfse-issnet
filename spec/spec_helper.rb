@@ -7,7 +7,7 @@ SimpleCov.start do
 end
 
 require "bundler/setup"
-require "nfse"
+require "nfse_issnet"
 require 'webmock/rspec'
 
 
