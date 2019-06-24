@@ -2,14 +2,14 @@
 sudo: false
 env:
   global:
-    - CC_TEST_REPORTER_ID=b9b227ed857b055698a4066544ca498671dfcd37c76b3b2412095a8ab4720636
+    - CC_TEST_REPORTER_ID=b3afb9e08d066d2a45e9b4c0577851b520acccc34c4ffa730a1db929c883a3f5
 language: ruby
 cache: bundler
 rvm:
   - 2.3.8
 notifications:
   - false
-before_install: gem install bundler -v 1.17.3
+before_install: gem install bundler
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
