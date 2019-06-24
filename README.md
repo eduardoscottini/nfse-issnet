@@ -1,45 +1,29 @@
 # Nfse Issnet
 
 [![Build Status](https://travis-ci.org/eduardoscottini/nfse_issnet.svg?branch=master)](https://travis-ci.org/eduardoscottini/nfse_issnet)
-[![Maintainability](https://api.codeclimate.com/v1/badges/16db339be9609ffa69ef/maintainability)](https://codeclimate.com/github/eduardoscottini/nfse_issnet/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/16db339be9609ffa69ef/test_coverage)](https://codeclimate.com/github/eduardoscottini/nfse_issnet/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f53b3ab25175f4bf5a5b/maintainability)](https://codeclimate.com/github/eduardoscottini/nfse_issnet/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/f53b3ab25175f4bf5a5b/test_coverage)](https://codeclimate.com/github/eduardoscottini/nfse_issnet/test_coverage)
 
-Simple integration with ISSNET for dealing with NFS-e.
+Integração simples para geração de nota fiscal de serviço(NFS-e) através do sistema ISSNET.
 
-## Installation
-
-Add this line to your application's Gemfile:
+## Instalação
 
 ```ruby
-gem 'nfse_issnet'
+gem 'nfse_issnet', git: 'https://github.com/eduardoscottini/nfse_issnet.git'
 ```
 
-And then execute:
+E então execute:
 
     $ bundle
 
-Or install it yourself as:
+## Requisitos:
 
-    $ gem install nfse_issnet
+Necessário um certificado do tipo A1 contendo o CNPJ em que é desejado realizar a integração.
 
-## Usage
+## Uso
 
-TODO: Write usage instructions here
+TODO: escrever instruções de uso para geração e consulta de RPS's e NFSe
 
-## Development
+## Licença
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/eduardoscottini/nfse_issnet. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the nfse_issnet project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/eduardoscottini/nfse_issnet/blob/master/CODE_OF_CONDUCT.md).
+A gem está disponível como open source sob os termos da [Licença MIT](https://opensource.org/licenses/MIT).
