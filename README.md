@@ -20,6 +20,16 @@ E então execute:
 
 Necessário um certificado do tipo A1 contendo o CNPJ em que é desejado realizar a integração.
 
+## Configuração
+```
+# config/initializers/nfse_issnet.rb
+
+NfseIssnet.configure do |config|
+  config.certificate_pkcs12_value = File.read('cert.p12')
+  config.certificate_pkcs12_password = Senha123
+end
+```
+
 ## Uso
 
 TODO: escrever instruções de uso para geração e consulta de RPS's e NFSe
