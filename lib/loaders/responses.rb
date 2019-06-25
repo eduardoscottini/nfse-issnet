@@ -1,0 +1,5 @@
+require "nfse_issnet/responses/base"
+require "nfse_issnet/responses/consulta_nfse"
+require "nfse_issnet/responses/consulta_nfse_por_rps"
+require "nfse_issnet/responses/consulta_lote_rps"
+require "nfse_issnet/responses/envia_lote_rps"
