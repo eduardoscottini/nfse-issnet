@@ -9,12 +9,20 @@ Integração simples para geração de nota fiscal de serviço(NFS-e) através d
 ## Instalação
 
 ```ruby
-gem 'nfse_issnet', git: 'https://github.com/eduardoscottini/nfse_issnet.git'
+gem 'nfse_issnet', '~> 0.1.0'
 ```
 
 E então execute:
 
     $ bundle
+
+Ou
+
+```
+gem install nfse_issnet
+ ```
+
+
 
 ## Requisitos:
 
