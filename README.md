@@ -9,7 +9,7 @@ Integração simples para geração de nota fiscal de serviço(NFS-e) através d
 ## Instalação
 
 ```ruby
-gem 'nfse_issnet', '~> 0.1.1'
+gem 'nfse_issnet', '~> 0.1.0'
 ```
 
 E então execute:
@@ -33,7 +33,7 @@ Necessário um certificado do tipo A1 contendo o CNPJ em que é desejado realiza
 # config/initializers/nfse_issnet.rb
 
 NfseIssnet.configure do |config|
-  config.certificate_pkcs12_value = File.read('cert.p12')
+  config.certificate_pkcs12_path = './cert.p12'
   config.certificate_pkcs12_password = Senha123
 end
 ```
