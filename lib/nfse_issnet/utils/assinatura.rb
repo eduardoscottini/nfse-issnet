@@ -1,4 +1,3 @@
-module NfseIssnet
   module Utils
     module Assinatura
 
@@ -35,4 +34,3 @@ module NfseIssnet
       end
     end
   end
-end

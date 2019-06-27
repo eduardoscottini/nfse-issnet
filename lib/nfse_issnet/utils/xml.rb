@@ -1,4 +1,3 @@
-module NfseIssnet
   module Utils
     module XML
       class << self
@@ -31,4 +30,3 @@ module NfseIssnet
       end
     end
   end
-end
