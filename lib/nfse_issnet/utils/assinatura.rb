@@ -17,7 +17,7 @@ module Utils
       attr_accessor :certificate_pkcs12_value, :certificate_pkcs12
 
       def certificate_pkcs12_value
-        @certificate_pkcs12_value ||= NfseIssnet.configuration.certificate_pkcs12_value
+        @certificate_pkcs12_value ||= File.read(NfseIssnet.configuration.certificate_pkcs12_path)
       end
 
       def certificate_pkcs12

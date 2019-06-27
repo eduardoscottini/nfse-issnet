@@ -6,7 +6,7 @@ module Utils
         opts[:context] ||= self
 
         # Inicializa a variavel xml com nil para comparar se oa rquivo foi de fato encontrado.
-        xml = find(file_name, 'lib/nfse_issnet/xml', opts[:context], opts)
+        xml = find(file_name, "#{NfseIssnet.root}/lib/nfse_issnet/xml", opts[:context], opts)
 
         # Lança uma excessão se não for encontrado o xml
         # Deve verificar se é nil pois o arquivo xml pode estar vazio

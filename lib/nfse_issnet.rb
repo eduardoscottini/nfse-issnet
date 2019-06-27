@@ -64,6 +64,10 @@ module NfseIssnet
     def configure
       yield(configuration)
     end
+
+    def root
+      File.expand_path '../..', __FILE__
+    end
   end
 
 
