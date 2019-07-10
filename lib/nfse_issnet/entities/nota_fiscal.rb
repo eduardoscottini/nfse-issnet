@@ -2,6 +2,7 @@ module NfseIssnet
   module Entities
     class NotaFiscal < BaseEntity
       attribute :numero, Types::Coercible::Integer
+      attribute :identificacao_rps, NfseIssnet::Entities::TcIdentificacaoRps
       attribute :servico, NfseIssnet::Entities::TcDadosServico
       attribute :tomador_servico, NfseIssnet::Entities::TcDadosTomador
       attribute :prestador_servico, NfseIssnet::Entities::TcDadosPrestador
