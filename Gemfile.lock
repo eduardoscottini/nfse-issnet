@@ -134,7 +134,7 @@ PLATFORMS
 DEPENDENCIES
   bundler
   nfse_issnet!
-  pry (~> 0.12.2)
+  pry
   rake (~> 10.0)
   rspec (~> 3.0)
   simplecov
