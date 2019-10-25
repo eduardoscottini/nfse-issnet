@@ -35,7 +35,7 @@ module NfseIssnet
     end
 
     def cliente
-      @cliente ||= Savon.client(wsdl: 'http://www.issnetonline.com.br/webserviceabrasf/homologacao/servicos.asmx?wsdl',
+      @cliente ||= Savon.client(wsdl: 'http://www.issnetonline.com.br/webserviceabrasf/bonito/servicos.asmx?wsdl',
                                 soap_version: 2,
                                 namespace_identifier: :nfd)
     end
